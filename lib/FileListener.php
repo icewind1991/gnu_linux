@@ -24,13 +24,22 @@ namespace OCA\GnuLinux;
 use OCP\Files\IRootFolder;
 use OCP\Files\File;
 use OCP\Files\Node;
+use OCP\IUserSession;
 
 class FileListener {
 	/** @var IRootFolder */
 	private $folder;
 
-	public function __construct(IRootFolder $folder) {
+	/** @var Log */
+	private $log;
+
+	/** @var IUserSession */
+	private $userSession;
+
+	public function __construct(IRootFolder $folder, Log $log, IUserSession $userSession) {
 		$this->folder = $folder;
+		$this->log = $log;
+		$this->userSession = $userSession;
 	}
 
 	public function listen() {
@@ -42,7 +51,7 @@ class FileListener {
 		if ($node instanceof File && $node->getMimePart() === 'text') {
 			$content = $node->getContent();
 			if (preg_match('/(?<!GNU\/)Linux/i', $content)) {
-				// TODO: log to database
+				$this->log->logWrite($node, $this->userSession->getUser());
 			}
 		}
 	}
