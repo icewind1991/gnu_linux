@@ -9,6 +9,11 @@
     <licence>agpl</licence>
     <author mail="robin@icewind.nl" >Robin Appelman</author>
     <namespace>GnuLinux</namespace>
+
+    <types>
+        <filesystem/>
+    </types>
+
     <category>tools</category>
     <bugs>https://github.com/icewind1991/gnu_linux/issues</bugs>
     <dependencies>
