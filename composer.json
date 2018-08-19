@@ -1,0 +1,15 @@
+{
+    "name": "Gnu Linux",
+    "description": "I&#39;d just like to interject for a moment",
+    "type": "project",
+    "license": "AGPL",
+    "authors": [
+        {
+            "name": "Robin Appelman"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^5.4"
+    }
+}

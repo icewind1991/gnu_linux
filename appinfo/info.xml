@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>gnulinux</id>
+    <name>Gnu Linux</name>
+    <summary>I&#39;d just like to interject for a moment</summary>
+    <description><![CDATA[Ensure that your users are referencing their favourite POSIX compatible operating with the correct terms.]]></description>
+    <version>0.0.1</version>
+    <licence>agpl</licence>
+    <author mail="robin@icewind.nl" >Robin Appelman</author>
+    <namespace>GnuLinux</namespace>
+    <category>tools</category>
+    <bugs>https://github.com/icewind1991/gnu_linux/issues</bugs>
+    <dependencies>
+        <nextcloud min-version="13" max-version="14"/>
+    </dependencies>
+    <navigations>
+        <navigation>
+            <name>Gnu Linux</name>
+            <route>gnulinux.page.index</route>
+        </navigation>
+    </navigations>
+</info>
